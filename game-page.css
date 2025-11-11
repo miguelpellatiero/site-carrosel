@@ -1,0 +1,292 @@
+/* Estilos para páginas de detalhes de jogos */
+
+.game-detail-container {
+    margin: 30px 0;
+}
+
+.game-header {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.game-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-header-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 40px 30px 30px;
+    color: white;
+}
+
+.game-header-overlay h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.game-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.game-main {
+    flex: 1;
+}
+
+.game-sidebar {
+    width: 300px;
+    position: sticky;
+    top: 100px;
+}
+
+.game-overview,
+.game-features,
+.game-details,
+.game-story {
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.game-overview h2,
+.game-features h2,
+.game-details h2,
+.game-story h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.game-overview p,
+.game-story p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555555;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    padding: 12px 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555555;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.features-list strong {
+    color: #222222;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.detail-item {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.detail-item h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222222;
+}
+
+.detail-item p {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Sidebar */
+.game-rating {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.game-rating h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+.rating-stars {
+    font-size: 24px;
+    color: #6c8eff;
+    margin-bottom: 8px;
+}
+
+.rating-score {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6c8eff;
+}
+
+.game-meta {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.game-meta h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #222222;
+}
+
+.game-meta p {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #555555;
+}
+
+.game-meta p:last-child {
+    margin-bottom: 0;
+}
+
+.game-action {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: block;
+    text-align: center;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #6c8eff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a7ae6;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #222222;
+    border: 1px solid #e0e0e0;
+}
+
+.btn-secondary:hover {
+    background-color: #e8e8e8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .game-header {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .game-header-overlay h1 {
+        font-size: 28px;
+    }
+
+    .game-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .game-sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-overview,
+    .game-features,
+    .game-details,
+    .game-story {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    .game-overview h2,
+    .game-features h2,
+    .game-details h2,
+    .game-story h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-header {
+        height: 220px;
+        margin-bottom: 20px;
+    }
+
+    .game-header-overlay h1 {
+        font-size: 22px;
+    }
+
+    .game-overview,
+    .game-features,
+    .game-details,
+    .game-story {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .game-overview h2,
+    .game-features h2,
+    .game-details h2,
+    .game-story h2 {
+        font-size: 18px;
+    }
+
+    .features-list li {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+
+    .detail-item h3,
+    .game-rating h3,
+    .game-meta h3 {
+        font-size: 13px;
+    }
+}
